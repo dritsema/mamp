@@ -84,7 +84,7 @@ mv index.html index.php
 nano index.php
 ```  
 
-Copy this:
+Replace with this code:
 ```php
 <?php
 phpinfo();
@@ -93,11 +93,12 @@ phpinfo();
 
 Save that off and refresh localhost to verify PHP.  
 
-### install MySQL  
+### Install MySQL  
 
 **Note:** If you are upgrading MySQL you should skip this section and instead [read this](http://coolestguidesontheplanet.com/upgrade-mysql-database-5-5-5-6-osx-10-8-mountan-lion/).  
 
-1. [Download](http://dev.mysql.com/downloads/mysql/) the MySQL DMG for Mac OS X.  **Pro Tip:** On the login page click [No thanks, just start my download](http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.dmg)  
+1. [Download](http://dev.mysql.com/downloads/mysql/) the MySQL DMG for Mac OS X.  
+**Pro Tip:** On the login page click [No thanks, just start my download](http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.dmg)  
 2. Install the package
 3. Update your path  
 
