@@ -131,4 +131,4 @@ cd mysql
 sudo ln -s /tmp/mysql.sock mysql.sock
 ```  
 
-Thats it, onto Virtual Hosts!
+Well that's it, onto Virtual Hosts!
