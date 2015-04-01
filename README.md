@@ -6,6 +6,8 @@ Beyond the basics, what I've typically found is that GUI based tools meant to "i
 
 So dig in, enjoy, and check back as often as you find yourself needing a refresher.  For other developer guides beyond the basics, feel free to check those out too.  
 
+---
+
 ### Terminal  
 
 Any terminal will do, the one bundled with OS X is in Applications->Utilities->Terminal.  Whatever you use, drag it to your Dock.  
