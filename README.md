@@ -41,9 +41,8 @@ Now edit the Apache configuration.  Again, use whichever editor you are comforta
 
 ```
 nano httpd.conf
-```
+```  
 
-`⌃ w php`  
 Uncomment php5_module by removing the `#`  
 
 ```
