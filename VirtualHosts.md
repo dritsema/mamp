@@ -15,7 +15,7 @@ Lets get started.
 Edit the Apache configuration file:  
 
 ```
-nano /etc/apache2/httpd.conf
+sudo nano /etc/apache2/httpd.conf
 ```  
 
 Find the following line:  
@@ -33,15 +33,15 @@ Include /private/etc/apache2/vhosts/*.conf
 This configures Apache to include all files ending in `.conf` in the `/private/etc/apache2/vhosts/` directory. Now we need to create this directory.  
 
 ```
-mkdir /etc/apache2/vhosts
+sudo mkdir /etc/apache2/vhosts
 cd /etc/apache2/vhosts
 ```  
 
 Create the default virtual host configuration file:  
 
 ```
-touch _default.conf
-nano _default.conf
+sudo touch _default.conf
+sudo nano _default.conf
 ```  
 
 Add the following configuration:  
@@ -71,8 +71,8 @@ mkdir ~/Sites/multisite.local
 Create the virtual host configuration file:  
 
 ```
-touch multisite.com.conf
-nano multisite.com.conf
+sudo touch /etc/apache2/vhosts/multisite.com.conf
+sudo nano /etc/apache2/vhosts/multisite.com.conf
 ```  
 
 Add the following configuration:  
@@ -140,8 +140,8 @@ If you are not familiar with permissions, [read more](http://www.library.yale.ed
 Be sure to replace the first one with your actual user:  
 
 ```
-chown -R ritsemad:_www /Users/ritsemad/Sites
-chmod -R 755 /Users/ritsemad/Sites
+sudo chown -R ritsemad:_www /Users/ritsemad/Sites
+sudo chmod -R 755 /Users/ritsemad/Sites
 ```  
 
 The `-R` flag makes the command recurrsive so everything inside those directories gets updated as well.  
