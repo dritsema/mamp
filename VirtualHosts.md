@@ -30,7 +30,9 @@ Below it, add the following line:
 Include /private/etc/apache2/vhosts/*.conf
 ```  
 
-This configures Apache to include all files ending in `.conf` in the `/private/etc/apache2/vhosts/` directory. Now we need to create this directory.  
+This configures Apache to include all files ending in `.conf` in the `/private/etc/apache2/vhosts/` directory.  
+
+Now we need to create this directory.  
 
 ```
 sudo mkdir /etc/apache2/vhosts
@@ -60,7 +62,9 @@ Typically, I like to keep the default site in its original location, then place 
 mkdir ~/Sites
 ```  
 
-Now you can create your first virtual host. The example below contains the virtual host configuration for a WordPress site called multisite.com.  
+Now you can create your first virtual host.  
+
+The example below contains the virtual host configuration for a WordPress site called multisite.com:  
 
 ```
 mkdir ~/Sites/multisite.local
@@ -131,9 +135,9 @@ dscacheutil -flushcache
 
 ### A note about permissions  
 
-Ugh the bane of my existence.  Welcome to the nightmare.  Fortunately with a couple short commands you can resolve most issues quickly.  
+Ugh the bane of my existence!  Fortunately with a couple short commands you can resolve most issues quickly.  
 
-You may receive 403 Forbidden when you visit your local site.  What you need to know is, the Apache user (_www) needs to have access to read, and sometimes write, to your web directory.  
+For example you may receive 403 Forbidden when you visit your local site.  What you need to know is, the Apache user (_www) needs to have access to read, and sometimes write, to your web directory.  
 
 If you are not familiar with permissions, [read more](http://www.library.yale.edu/wsg/docs/permissions/). For now though, the easiest thing to do is ensure your web directory has permissions of 755. You can change permissions with these commands.  
 
