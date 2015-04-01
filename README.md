@@ -26,7 +26,7 @@ sudo su -
 apachectl start
 ```
 
-Once Apache is running, http://localhost should display the default "It works!" page. The document root of the default site is found in /Library/WebServer/Documents/.
+Once Apache is running, http://localhost should display the default "It works!" page. The document root of the default site is found in `/Library/WebServer/Documents/`.
 
 ### Enable PHP  
 
@@ -43,7 +43,7 @@ Now edit the Apache configuration.  Again, use whichever editor you are comforta
 nano httpd.conf
 ```
 
-control w "php"  
+`⌃ w php`  
 Uncomment php5_module by removing the `#`  
 
 ```
