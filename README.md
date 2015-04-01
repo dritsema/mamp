@@ -14,7 +14,7 @@ Any terminal will do, the one bundled with OS X is in Applications->Utilities->T
 
 ### A word on sudo  
 
-Best practice is to prefix any administrative commands with *sudo*.  In rare cases where you need to run a bunch of these in succession, you can actually switch to root.  Just keep in mind that bad things can happen if you're not extra careful.  At the end, be sure to `exit`!  
+Best practice is to prefix any administrative commands with `sudo`.  In rare cases where you need to run a bunch of these in succession, you can actually switch to root.  Just keep in mind that bad things can happen if you're not extra careful.  At the end, be sure to `exit`!  
 
 ```
 sudo su -
