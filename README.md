@@ -50,7 +50,7 @@ Uncomment php5_module by removing the `#`
 LoadModule php5_module libexec/apache2/libphp5.so
 ```  
 
-**Note:** The default configuration for Apache 2.4 on OS X Yosemite seemed pretty lean. For example, common modules like mod_rewrite were disabled.  Lets just enable those now too.  
+**Note:** The default configuration for Apache 2.4 on OS X Yosemite is pretty lean. For example, common modules like mod_rewrite were disabled.  Lets just enable those now too.  
 
 ```
 LoadModule deflate_module libexec/apache2/mod_deflate.so
@@ -65,7 +65,7 @@ apachectl restart
 
 You can verify PHP is enabled by creating a `phpinfo()` script in your `DocumentRoot`.  
 
-The default DocumentRoot for Mac OS X is /Library/WebServer/Documents.  
+The default `DocumentRoot` for Mac OS X is `/Library/WebServer/Documents`.  
 
 ### Bonus Points
 
@@ -75,14 +75,16 @@ Verify your `DocumentRoot` from your Apache configuration.
 grep DocumentRoot httpd.conf
 ```
 
-Now create the `phpinfo()` script in your `DocumentRoot`.  Rename index.html as index.php and change its content:
+Now create the `phpinfo()` script in your `DocumentRoot`.  
 
+Rename index.html as index.php and change its content:
 ```
 cd /Library/WebServer/Documents/
 mv index.html index.php
 nano index.php
-```
+```  
 
+Copy this:
 ```php
 <?php
 phpinfo();
