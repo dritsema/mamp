@@ -2,19 +2,15 @@
 
 ### What are Virtual Hosts?  
 
-From the Apache Virtual Host documentation:  
-
-> The term Virtual Host refers to the practice of running more than one web site (such as company1.example.com and company2.example.com) on a single machine.  
-
 By default, the Apache configuration on Mac OS X serves files from `/Library/WebServer/Documents` accessed by the name locahost. This is essentially a single site configuration. You could mimic multiple sites by creating subdirectories and access a site at `localhost/somesite`.  This is not ideal.  
 
 ### Enter Virtual Hosts  
 
-First, open Terminal and switch to the `root` user to avoid permission issues while running these commands.  Again, use caution!  
+From the Apache Virtual Host documentation:  
 
-```
-sudo su -
-```  
+> The term Virtual Host refers to the practice of running more than one web site (such as company1.example.com and company2.example.com) on a single machine.  
+
+Lets get started.  
 
 Edit the Apache configuration file:  
 
