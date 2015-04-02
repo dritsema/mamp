@@ -1,16 +1,16 @@
 This guide is meant to help you through the process of installing Apache, PHP, and MySQL on Mac OS X.  
 
-A reminder that OS X runs atop UNIX, so most UNIX software installs easily on OS X. Furthermore, Apache and PHP come pre-packaged. To create a local web server, all you need to do is enable them and install MySQL (yep!).  
+A reminder that OS X runs atop UNIX, so most UNIX software installs easily on OS X. Furthermore, Apache and PHP come pre-packaged. To create a local web server, all you need to do is enable them and install MySQL.  
 
 **_But wait, isn't there this ultra uber app called MAMP which will do all this for me!?_** True, this will get you started quickly. But I imagine thats not why you're here. I imagine you're here to learn something, to better understand your environment, and to not be completely lost when something goes wrong, which it innevitabley does.  
 
-Beyond the basics, what I've typically found is that GUI based tools meant to *"increase efficiency"* really end up costing you more in the long run. The process below is more in line with what you would find on an actual Linux server.   
+Beyond the basics, what I've typically found is that GUI based tools meant to *"increase efficiency"* really end up costing you more in the long run. The process below is more in line with what you would find on an actual Linux server, so you can find your away around there too.  
 
 ---
 
 ### Terminal  
 
-Any terminal will do, the one bundled with OS X is in Applications->Utilities->Terminal.  Whatever you use, drag it to your Dock.  
+Any terminal will do. The one bundled with OS X is in Applications->Utilities->Terminal.  Whatever you use, drag it to your Dock.  
 
 ### A word on sudo  
 
@@ -57,7 +57,7 @@ LoadModule expires_module libexec/apache2/mod_expires.so
 LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 ```  
 
-Save that off and Restart Apache  
+Save that off and restart Apache  
 ```
 apachectl restart
 ```
@@ -112,7 +112,13 @@ Add this line:
 export PATH=~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH
 ```  
 
-**Note:** You will need to restart terminal or open a new terminal window for this to take effect.  
+Reload your .bash_profile:  
+
+```
+source ~/.bash_profile
+```  
+
+**Note:** Restarting terminal or opening a new terminal window will also reload `~/.bash_profile`.  
 
 ### Bonus Points  
 
