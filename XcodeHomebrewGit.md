@@ -26,7 +26,7 @@ The full instructions are available on the [Homebrew Wiki](https://github.com/Ho
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```  
 
-You should see something like this  
+After that runs you should see something like this:  
 
 ```
 ==> Installation successful!
