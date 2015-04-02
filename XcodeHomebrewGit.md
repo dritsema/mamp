@@ -1,0 +1,89 @@
+#Install Xcode, Homebrew, Git  
+
+> As we all know the majority of the Web development community uses Git. The funny part to the whole story is the fact that most developers don't even know what version they're using.  
+
+And in fact when I first started writing this the version installed on my Mac was 1.9 and the latest current stable release was 2.3.  Then again, making sure my version of Git is up to date is the last thing on my mind.  Uninstall the old version, downloan the latest DMG, install the package, change PATH variables, bla bla bla...there's a better way.  
+
+### Enter Homebrew  
+
+This method takes a little bit of setup, but its well worth the time.  Homebrew is an awesome tool that makes installing packages, libraries, utilities, etc. a breeze.  
+
+To install Homebrew first we need to install Xcode.  Xcode is a developer suite Apple offers with all the tools you need to build Mac and iOS apps, but also includes basic compilers and libraries needed to install various web development tools.  
+
+Fortunately since Mavericks and Yosemite this is relateively painless.  
+
+#### Install Xcode
+
+```
+xcode-select --install
+```  
+
+You should see the pop up below on your screen. Click `Install` when it appears.  
+
+#### Install Homebrew  
+
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```  
+
+You should see something like this  
+
+```
+==> Installation successful!
+==> Next steps
+Run `brew doctor` before you install anything
+Run `brew help` to get started
+```  
+
+Now do what you're told :)  
+
+```
+brew doctor
+```  
+
+If you get `Your system is ready to brew`, you can move on. Otherwise, address those issues noted.  
+
+### Install Git  
+
+```
+brew update
+brew install git
+```  
+
+Since we just installed Homebrew, we could have skipped `brew update`, but it’s a good habit to run it before installing anything with Homebrew because Homebrew is updated regularly.  
+
+To verify you were upgraded:  
+
+```
+git --version
+```  
+
+You should get `git version 2.3.5` or later.  
+
+Run `brew doctor` to make sure everything is still working.  
+
+Wanna keep git up to date? Easy peezy 123:  
+
+```
+brew upgrade git
+```  
+
+You’re now part of the wonderful esoteric world of the developers that actually know how to keep Git up to date. Cheers!  
+
+### Configure Git  
+
+Tell Git your name so your commits will be properly labeled.  
+
+```
+git config --global user.name "YOUR NAME"
+```  
+
+Tell Git the email address that will be associated with your Git commits. The email you specify should be the same one found in your email settings.  
+
+```
+git config --global user.email "YOUR EMAIL ADDRESS"
+```  
+
+### Celebrate  
+
+You now have everything you need for WordPress development.  Your choice of editor tools are all up to you but we'll cover some of the good ones anyway.  For now though, onto WordPress!
