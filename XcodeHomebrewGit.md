@@ -16,9 +16,11 @@ Fortunately since Mavericks and Yosemite getting this installed is relatively pa
 xcode-select --install
 ```  
 
-You should see the pop up below on your screen. Click `Install` when it appears.  
+You should be prompted to install the command line developer tools. Click `Install` when it appears.  
 
 #### Install Homebrew  
+
+The full instructions are available on the [Homebrew Wiki](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Installation.md#installation), but you should only need to run the command that’s listed at the top of the [Homebrew](http://brew.sh/) site:
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
