@@ -35,7 +35,7 @@ Run `brew doctor` before you install anything
 Run `brew help` to get started
 ```  
 
-Now do what you're told :)  
+Now do what you're told :smiley:  
 
 ```
 brew doctor
@@ -96,6 +96,6 @@ git config --global credential.helper osxkeychain
 
 The next time you pull, push, etc. you'll be prompted for your username and password, and to grant access to the OSX keychain. After you've done this, the username and password are stored in your keychain and you won't be required to type them into Git again (unless of course you update password).  
 
-### Celebrate  
+### Celebrate :beers:   
 
 You now have everything you need for WordPress development.  Your choice of editor tools are all up to you but we'll cover some of the good ones anyway.  For now though, onto WordPress!
