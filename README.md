@@ -109,7 +109,7 @@ nano ~/.bash_profile
 Add this line:  
 
 ```
-export PATH=~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH
+export PATH="/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/usr/local/sbin:$PATH"
 ```  
 
 Reload your .bash_profile:  
