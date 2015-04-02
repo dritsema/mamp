@@ -6,11 +6,9 @@ And in fact when I first started writing this the version installed on my Mac wa
 
 ### Enter Homebrew  
 
-This method takes a little bit of setup, but its well worth the time.  Homebrew is an awesome tool that makes installing packages, libraries, utilities, etc. a breeze.  
+This method takes a little bit of setup but its well worth the time.  Homebrew is an awesome tool that makes installing packages, libraries, utilities a breeze.  To install it, first we need to install Xcode.  Xcode is a developer suite Apple offers with all the tools you need to build Mac and iOS apps, but also includes basic compilers and libraries needed to install various web development tools.  
 
-To install Homebrew first we need to install Xcode.  Xcode is a developer suite Apple offers with all the tools you need to build Mac and iOS apps, but also includes basic compilers and libraries needed to install various web development tools.  
-
-Fortunately since Mavericks and Yosemite this is relateively painless.  
+Fortunately since Mavericks and Yosemite getting this installed is relatively painless.  
 
 #### Install Xcode
 
