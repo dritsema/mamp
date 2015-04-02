@@ -152,7 +152,7 @@ The `-R` flag makes the command recurrsive so everything inside those directorie
 
 **Note:** There are many ways to solve permission issues. I have provided this as the *easiest* solution, not necessarily the best.  
 
-### Celebrate  
+### Celebrate :beers:  
 
 Any time you want to add a site to Apache on your Mac, simply create a virtual host configuration file for that site and map it in your hosts file.  
 

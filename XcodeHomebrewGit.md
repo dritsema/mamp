@@ -35,7 +35,7 @@ Run `brew doctor` before you install anything
 Run `brew help` to get started
 ```  
 
-Now do what you're told :smiley:  
+Now do what you're told :point_up:  
 
 ```
 brew doctor
