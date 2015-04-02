@@ -98,4 +98,4 @@ The next time you pull, push, etc. you'll be prompted for your username and pass
 
 ### Celebrate :beers:   
 
-You now have everything you need for WordPress development.  Your choice of editor tools are all up to you but we'll cover some of the good ones anyway.  For now though, onto WordPress!
+You now have everything you need for WordPress development.  Your choice of editor tools are all up to you but we'll cover some of the good ones anyway.  For now though, [onto WordPress](http://codex.wordpress.org/Create_A_Network)!
