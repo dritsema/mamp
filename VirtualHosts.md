@@ -156,4 +156,4 @@ The `-R` flag makes the command recurrsive so everything inside those directorie
 
 Any time you want to add a site to Apache on your Mac, simply create a virtual host configuration file for that site and map it in your hosts file.  
 
-Well that's it, onto Git!
+Well that's it, [onto Git](XcodeHomebrewGit.md)!
