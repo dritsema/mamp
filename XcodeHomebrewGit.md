@@ -84,6 +84,18 @@ Tell Git the email address that will be associated with your Git commits. The em
 git config --global user.email "YOUR EMAIL ADDRESS"
 ```  
 
+### Authenticating with GitHub from Git  
+
+When you connect to a GitHub repository from Git, you'll need to authenticate with GitHub using either HTTPS or SSH.  HTTPS is now the recommended method by GitHub and to help they added credential helper.  Since we installed Git with Homebrew, this function was already included.  
+
+To tell Git to use this helper, run this:  
+
+```
+git config --global credential.helper osxkeychain
+```  
+
+The next time you pull, push, etc. you'll be prompted for your username and password, and to grant access to the OSX keychain. After you've done this, the username and password are stored in your keychain and you won't be required to type them into Git again (unless of course you update password).  
+
 ### Celebrate  
 
 You now have everything you need for WordPress development.  Your choice of editor tools are all up to you but we'll cover some of the good ones anyway.  For now though, onto WordPress!
