@@ -4,8 +4,6 @@
 
 By default, the Apache configuration on Mac OS X serves files from `/Library/WebServer/Documents` accessed by the name locahost. This is essentially a single site configuration. You could mimic multiple sites by creating subdirectories and access a site at `localhost/somesite`.  This is not ideal.  
 
-### Enter Virtual Hosts  
-
 From the Apache Virtual Host documentation:  
 
 > The term Virtual Host refers to the practice of running more than one web site (such as company1.example.com and company2.example.com) on a single machine.  
