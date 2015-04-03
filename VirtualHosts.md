@@ -67,8 +67,8 @@ NameVirtualHost *:80
 <VirtualHost *:80>
 	DocumentRoot "/Library/WebServer/Documents"
 	<Directory "/Library/WebServer/Documents">
-		Allow From All
 		AllowOverride All
+		Require all granted
 	</Directory>
 	CustomLog "|/usr/sbin/rotatelogs /private/var/log/apache2/default-access_log 86400" combined
 	ErrorLog "|/usr/sbin/rotatelogs /private/var/log/apache2/default-error_log 86400"
@@ -81,8 +81,8 @@ NameVirtualHost *:80
 	CustomLog "/private/var/log/apache2/multisite.local-access_log" common
 
 	<Directory "/Users/ritsemad/Sites/multisite.local/">
-		Allow From All
 		AllowOverride All
+		Require all granted
 	</Directory>
 </VirtualHost>
 ```  
