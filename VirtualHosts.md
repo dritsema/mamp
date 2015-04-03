@@ -80,7 +80,7 @@ NameVirtualHost *:80
 	ErrorLog "/private/var/log/apache2/multisite.local-error_log"
 	CustomLog "/private/var/log/apache2/multisite.local-access_log" common
 
-	<Directory "/Users/ritsemad/Sites/multisite.local/">
+	<Directory "/Users/ritsemad/Sites/multisite.local">
 		AllowOverride All
 		Require all granted
 	</Directory>
