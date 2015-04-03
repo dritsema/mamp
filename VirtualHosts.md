@@ -87,7 +87,11 @@ NameVirtualHost *:80
 </VirtualHost>
 ```  
 
-**Note:** Be sure to update your username and path in `multisite.local` to your situation.  
+**Note:** Note: The Require all granted configuration became available in Apache 2.4 which comes with OS X Yosemite. If you are running a version of OS X before Yosemite, use the equivalent 2.2 configuration:
+```
+Allow From All
+AllowOverride All
+```  
 
 The first entry points to the default web site, which will also work as a catch-all host for any virtual host that wasn't defined anywhere else. The second entry points instead to the ~/Sites/multisite.local folder.  This `VirtualHost` configuration allows me to access my site from *http://multisite.local* for local development.  
 
