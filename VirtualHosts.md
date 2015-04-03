@@ -65,14 +65,7 @@ and change it to something like the following:
 NameVirtualHost *:80
 
 <VirtualHost *:80>
-	DocumentRoot "/Library/WebServer/Documents"
-	<Directory "/Library/WebServer/Documents">
-		Order allow, deny
-		Allow from all
-		Require all granted
-	</Directory>
-	CustomLog "|/usr/sbin/rotatelogs /private/var/log/apache2/default-access_log 86400" combined
-	ErrorLog "|/usr/sbin/rotatelogs /private/var/log/apache2/default-error_log 86400"
+    DocumentRoot "/Library/WebServer/Documents"
 </VirtualHost>
 
 <VirtualHost *:80>
