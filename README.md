@@ -2,28 +2,24 @@ This guide is meant to help you through the process of installing Apache, PHP, a
 
 A reminder that OS X runs atop UNIX, so most UNIX software installs easily on OS X. Furthermore, Apache and PHP come pre-packaged. To create a local web server, all you need to do is enable them and install MySQL.  
 
-**_But wait, isn't there this ultra uber app called MAMP which will do all this for me!?_** True, this will get you started quickly. But I imagine thats not why you're here. I imagine you're here to learn something, to better understand your environment, and to not be completely lost when something goes wrong, which it innevitabley does.  
-
-Beyond the basics, what I've typically found is that GUI based tools meant to *"increase efficiency"* really end up costing you more in the long run. The process below is more in line with what you would find on an actual Linux server, so you can find your away around there too.  
+**_But wait, isn't there this ultra uber app called MAMP which will do all this for me!?_** True, this will get you started the quickest. Beyond the basics though, what I've typically found is that GUI based tools meant to *"increase efficiency"* really end up costing you more in the long run as you grow, and ultimately you end up going back to wanting more control.  So lets get started :smiling_imp:  
 
 ---
 
 ### Terminal  
 
-Any terminal will do. The one bundled with OS X is in Applications->Utilities->Terminal.  Whatever you use, drag it to your Dock.  
+Any terminal will do. The one bundled with OS X is in Applications->Utilities->Terminal.  
+
+Whatever you use, drag it to your :mac: Dock.  
 
 ### A word on sudo  
 
-Best practice is to prefix any administrative commands with `sudo`.  In rare cases where you need to run a bunch of these in succession, you can actually switch to root.  Just keep in mind that bad things can happen if you're not extra careful.  At the end, be sure to `exit`!  
-
-```
-sudo su -
-```
+Best practice is to prefix any administrative commands with `sudo`.  In rare cases where you need to run a bunch of these in succession, you can actually switch to root using `sudo su -`. I just prefer to use `sudo` for commands that need it.  
 
 ### Enable Apache  
 
 ```
-apachectl start
+sudo apachectl start
 ```
 
 Once Apache is running, http://localhost should display the default "It works!" page. The document root of the default site is found in `/Library/WebServer/Documents/`.
@@ -34,13 +30,13 @@ First, make a backup of the default Apache configuration. This is good practice 
 
 ```
 cd /etc/apache2/
-cp httpd.conf httpd.conf.bak
+sudo cp httpd.conf httpd.conf.bak
 ```
 
 Now edit the Apache configuration.  Again, use whichever editor you are comfortable with.  For plain text, I prefer nano.  
 
 ```
-nano httpd.conf
+sudo nano httpd.conf
 ```  
 
 Uncomment php5_module by removing the `#`  
@@ -59,7 +55,7 @@ LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 
 Save that off and restart Apache  
 ```
-apachectl restart
+sudo apachectl restart
 ```
 
 You can verify PHP is enabled by creating a `phpinfo()` script in your `DocumentRoot`.  
@@ -79,8 +75,8 @@ Now create the `phpinfo()` script in your `DocumentRoot`.
 Rename index.html as index.php and change its content:
 ```
 cd /Library/WebServer/Documents/
-mv index.html index.php
-nano index.php
+sudo mv index.html.en index.php
+sudo nano index.php
 ```  
 
 Replace with this code:
@@ -90,29 +86,32 @@ phpinfo();
 ?>
 ```
 
-Save that off and refresh localhost to verify PHP.  
+Save that off and refresh localhost to verify PHP. You should see a page listing environment variables for your parcitular installation of PHP. If you don't go back and verify those modules were enabled in Apache.   
 
 ### Install MySQL  
 
 **Note:** If you are upgrading MySQL you should skip this section and instead [read this](http://coolestguidesontheplanet.com/upgrade-mysql-database-5-5-5-6-osx-10-8-mountan-lion/).  
 
 1. [Download](http://dev.mysql.com/downloads/mysql/) the MySQL DMG for Mac OS X.  
-**Pro Tip:** On the login page click [No thanks, just start my download](http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.dmg)  
-2. Install the package
-3. Update your path  
+**When downloading you don’t have to sign up, look for `No thanks, just start my download`  
+2. Install the package  
 
 ```
 echo $PATH
-nano ~/.bash_profile
+```  
+
+Now just make sure that `/usr/local/mysql/bin` is in your $PATH to use mysql commands without typing the full path to the commands.  If its not, simply do this:  
+
 ```
+sudo nano ~/.bash_profile
+```  
 
-Add this line:  
-
+And add this line (including other common paths):  
 ```
 export PATH="/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/usr/local/sbin:$PATH"
 ```  
 
-Reload your .bash_profile:  
+Then reload your .bash_profile:  
 
 ```
 source ~/.bash_profile
