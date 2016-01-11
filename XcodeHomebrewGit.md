@@ -31,11 +31,10 @@ After that runs you should see something like this:
 ```
 ==> Installation successful!
 ==> Next steps
-Run `brew doctor` before you install anything
 Run `brew help` to get started
 ```  
 
-Now do what you're told :point_up:  
+Confirm things are working :point_up:  
 
 ```
 brew doctor
@@ -58,7 +57,7 @@ To verify you were upgraded:
 git --version
 ```  
 
-You should get `git version 2.3.5` or later.  
+You should get `git version 2.4.6` or later.  
 
 Run `brew doctor` to make sure everything is still working.  
 
@@ -68,7 +67,7 @@ Wanna keep git up to date? Easy peezy 123:
 brew upgrade git
 ```  
 
-You’re now part of the wonderful esoteric world of the developers that actually know how to keep Git up to date. Cheers!  
+You’re now part of the wonderful esoteric world of developers that actually know how to keep Git up to date. :beers: Cheers!  
 
 ### Configure Git  
 
@@ -98,4 +97,4 @@ The next time you pull, push, etc. you'll be prompted for your username and pass
 
 ### Celebrate :beers:   
 
-You now have everything you need for WordPress development.  Your choice of editor tools are all up to you but we'll cover some of the good ones anyway.  For now though, [onto WordPress](http://codex.wordpress.org/Create_A_Network)!
+You now have everything you need for local LAMP (or MAMP) development.  Your choice of editor tools are all up to you but we'll cover some of the good ones anyway in future tutorials.
